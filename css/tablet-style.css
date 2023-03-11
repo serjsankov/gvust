@@ -1,0 +1,19 @@
+.container {
+    padding: 0 32px;
+}
+
+.info-video__link {
+    height: 361px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.info-video__link-btn {
+    top: 153px;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 48px;
+    }
+}
