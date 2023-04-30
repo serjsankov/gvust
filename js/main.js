@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const containerSelectBrans = document.querySelector(".js-container-select-brands")
   initClicks();
   initCustomSelect();
+  initMaskInputs();
   function initClicks() {
     document.addEventListener("click", (event) => {
       if (event.target.closest(".burger")) {
@@ -20,5 +21,9 @@ window.addEventListener("DOMContentLoaded", () => {
   };
   function initCustomSelect() { 
     $("select").selectize();
+  };
+
+  function initMaskInputs() { 
+    $(".js-mask-price").mask("#,##0$", { reverse: true });
   };
 });
