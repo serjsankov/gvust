@@ -1,5 +1,11 @@
 .container {
     padding: 0 320px;
+    width: 1920px;
+}
+
+.section {
+    padding-bottom: 100px;
+    border-radius: 80px;
 }
 
 .section__title {
@@ -31,11 +37,6 @@
 
 .header__btn img {
     width: 18px;
-}
-
-.info {
-    padding-bottom: 100px;
-    border-radius: 80px;
 }
 
 .info-flex {
@@ -138,6 +139,21 @@
     top: 278px;
 }
 
+.billing {
+    padding-bottom: 144px;
+}
+
+
+.billing-info__price {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+.billing-info__access-list {
+    gap: 26px;
+}
+
 
 .footer {
     padding-top: 140px;
@@ -189,6 +205,12 @@
     gap: 40px;
 
     padding: 0;
+}
+
+@media screen and (max-width: 1920px) {
+    .container {
+        width: 100%;
+    }
 }
 
 
@@ -256,6 +278,17 @@
 
     .info-video__link-btn {
         top: 204px;
+    }
+
+    .billing-info__access-list {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 1155px) {
+    .billing-info__price {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 

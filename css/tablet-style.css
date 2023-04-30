@@ -2,6 +2,10 @@
     padding: 0 32px;
 }
 
+.header-info__menu {
+    padding: 0 32px 50px;
+}
+
 .info-video__link {
     height: 361px;
     width: 600px;
@@ -12,8 +16,91 @@
     top: 153px;
 }
 
-@media screen and (max-width: 1024px) {
+.billing-history__info {
+    margin-top: 32px;
+}
+
+@media screen and (min-width: 1024px) {
     .container {
         padding: 0 48px;
+    }
+
+    .footer {
+        margin-top: -65px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .header-info__menu {
+        padding: 0;
+
+        position: static;
+
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 42px;
+
+        box-shadow: none;
+    }
+
+    .header-info__subscription-grid {
+        text-align: left;
+    }
+
+    .headet-info__item {
+        flex-direction: row;
+    }
+
+    .billing-info__head.desk_hide {
+        display: none;
+    }
+
+    .billing-info__head.mob_hide {
+        display: block;
+    }
+
+    .billing-info {
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-top: 40px;
+        padding: 27px 30px 36px;
+
+        background: #FFFFFF;
+        box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 24px;
+    }
+
+    .billing-info__services {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .billing-info__access {
+        margin-top: 0;
+
+        gap: 18px;
+    }
+
+    .billing-info__access-top {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .billing-info__access-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .billing-info__price-button {
+        width: 165px;
+    }
+
+    .billing-history {
+        margin-top: 60px;
     }
 }

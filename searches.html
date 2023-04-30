@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/fancybox.min.css" />
+    <link rel="stylesheet" href="./css/selectize.min.css" />
+    <link rel="stylesheet" href="./css/reset-style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./css/tablet-style.css"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/desk-style.css"
+      media="(min-width: 1025px)"
+    />
+    <title>Searches</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <div class="header-logo">
+            <img src="./img/logo.svg" alt="logo" class="header-img" />
+          </div>
+          <div class="header-info">
+            <div class="burger">
+              <span class="burger__line burger__line-top"></span>
+              <span class="burger__line burger__line-center"></span>
+              <span class="burger__line burger__line-bottom"></span>
+            </div>
+            <div class="header-info__menu js-header-menu">
+              <div class="header-info__user">
+                <img
+                  class="header-info__user-img"
+                  src="./img/user-test.png"
+                  alt="user"
+                />
+              </div>
+              <a
+                href="#"
+                class="headet-info__item header-info__subscription subscription__link"
+              >
+                <img src="./img/premium-small.svg" alt="icon" />
+                <span class="headr-info__text header-info__subscription-head"
+                  >Get Premium</span
+                >
+              </a>
+              <div class="headet-info__item headr-info__searches">
+                <img src="./img/searches.svg" alt="icon" />
+                <span class="headr-info__text">My Searches</span>
+              </div>
+              <div class="headet-info__item headr-info__billing">
+                <img src="./img/billing.svg" alt="icon" />
+                <span class="headr-info__text">Billing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="section searches">
+      <div class="container">
+        <h1 class="section__title">Searches</h1>
+        <form method="" action="" class="searches-filter">
+          <div class="searches-filter__property">
+            <div class="searches-filter__property-brand js-container-select-brands">
+              <div class="searches-filter__property-select">
+                <span class="searches-filter__property-description">Make</span>
+                <div class="searches-filter__property-brand-flex">
+                  <div class="searches-filter__property-brand-flex-selects">
+                    <div class="searches-filter__select-container">
+                      <select name="brand" id="" class="searches-filter__select" placeholder="Brands">
+                        <option></option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                      </select>
+                    </div>
+                    <div class="searches-filter__select-container select_hidden">
+                      <select name="brands_all" id="" class="searches-filter__select" placeholder="Brands">
+                        <option></option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="">
+                    <button class="searches-filter__property-button js-show-select-brand">
+                      <span
+                        class="searches-filter__property-button-line button-line_vertical"
+                      ></span>
+                      <span
+                        class="searches-filter__property-button-line button-line_position"
+                      ></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="searches-filter__property-flex">
+              <div class="searches-filter__property-select">
+                <span class="searches-filter__property-description">Year</span>
+                <div class="searches-filter__property-container-flex">
+                  <div class="searches-filter__select-container">
+                    <select name="year_from" id="" class="searches-filter__select" placeholder="From">
+                      <option></option>
+                      <option value="20000">20 000</option>
+                      <option value="30000">30 000</option>
+                      <option value="40000">40 000</option>
+                    </select>
+                  </div>
+                  <div class="searches-filter__select-container">
+                    <select name="year_to" id="" class="searches-filter__select" placeholder="To">
+                      <option></option>
+                      <option value="100000">100 000</option>
+                      <option value="150000">150 000</option>
+                      <option value="200000">200 000</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="searches-filter__property-select">
+                <span class="searches-filter__property-description">Price</span>
+                <div class="searches-filter__property-container-flex">
+                  <div class="searches-filter__select-container">
+                    <input name="price_from" class="searches-filter__input" type="text" placeholder="From">
+                  </div>
+                  <div class="searches-filter__select-container">
+                    <input name="price_to" class="searches-filter__input" type="text" placeholder="To">
+                  </div>
+                </div>
+              </div>
+              <div class="searches-filter__property-select">
+                <span class="searches-filter__property-description">Odometer</span>
+                <div class="searches-filter__property-container-flex">
+                  <div class="searches-filter__select-container">
+                    <input name="odometer_from" class="searches-filter__input" type="text" placeholder="From">
+                  </div>
+                  <div class="searches-filter__select-container">
+                    <input name="odometer_to" class="searches-filter__input" type="text" placeholder="To">
+                  </div>
+                </div>
+              </div>
+              </div>
+              <div class="searches-filter__property-flex">
+              <div class="searches-filter__property-select">
+                <span class="searches-filter__property-description">Title status <img src="./img/select-icon.svg" alt="icon"></span>
+                  <div class="searches-filter__select-container">
+                    <select name="title_status" id="" class="searches-filter__select" placeholder="Any">
+                      <option></option>
+                    </select>
+                  </div>
+              </div>
+              <div class="searches-filter__property-select">
+                <span class="searches-filter__property-description">Source <img src="./img/select-icon.svg" alt="icon"></span>
+                  <div class="searches-filter__select-container">
+                    <select name="source" id="" class="searches-filter__select" placeholder="Any">
+                      <option></option>
+                    </select>
+                  </div>
+              </div>
+              <div class="searches-filter__property-select">
+                <div class="searches-filter__property-container-flex">
+                  <div class="searches-filter__select-container">
+                    <span class="searches-filter__property-description">ZIP code <img src="./img/select-icon.svg" alt="icon"></span>
+                    <input name="zip_code" class="searches-filter__input" type="text" placeholder="To">
+                  </div>
+                  <div class="searches-filter__select-container">
+                    <span class="searches-filter__property-description">Radius <img src="./img/select-icon.svg" alt="icon"></span>
+                    <select name="radius" id="" class="searches-filter__select" placeholder="To">
+                      <option></option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="searches-filter__property-flex-btns">
+              <button class="searches-filter__property-btn searches-filter__property-btn_no_background">
+                <img src="./img/searche-color.svg" alt="icon">
+                <span>Save search</span>
+              </button>
+              <button class="searches-filter__property-btn btn">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-flex">
+          <div class="footer-text">
+            <h2 class="section__title">Contact Us</h2>
+            <p>
+              If you gave any questions or need support, please contact us at
+              info@gvust.com or ask right in the Support Chat. Thank you.
+            </p>
+          </div>
+          <div class="footer__btn-links">
+            <a href="#" class="footer__btn">
+              <span>info@gvust.com</span>
+              <img src="./img/footer-sms.svg" alt="" class="footer__btn-img" />
+            </a>
+            <a href="#" class="footer__btn footer__btn_width_small">
+              <span>Support Chat</span>
+              <img src="./img/footer-mess.svg" alt="" class="footer__btn-img" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-info">
+          <span class="footer-info__text"
+            >© 2023 Gvust.com. All rights reserved</span
+          >
+          <div class="footer-info__links">
+            <a href="#" class="footer-info__text">Terms of Service</a>
+            <a href="#" class="footer-info__text">Privacy Policy</a>
+            <a href="#" class="footer-info__text"
+              >Do Not Sell My Personal Information</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./library/jquery.min.js"></script>
+    <script src="./library/jquery.fancybox.min.js"></script>
+    <script src="./library/jquery.selectize.min.js"></script>
+    <script src="./library/jquery.inputmask.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
