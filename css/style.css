@@ -717,6 +717,8 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
+
+    cursor: pointer;
 }
 
 .searches-filter__property-btn {
