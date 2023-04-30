@@ -103,4 +103,25 @@
     .billing-history {
         margin-top: 60px;
     }
+
+    .searches-filter__property-flex {
+        flex-direction: row;
+    }
+
+    .searches-filter__property-flex-btns {
+        justify-content: flex-end;
+    }
+
+    .searches-filter__property-btn {
+        width: 172px;
+        flex-basis: auto;
+    }
+
+    .searches-filter__property-btn_no_background {
+        justify-content: flex-end;
+    }
+
+    .searches-filter__property-brand {
+        width: 452px;
+    }
 }
