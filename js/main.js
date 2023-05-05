@@ -1,9 +1,14 @@
 window.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
-  const containerSelectBrans = document.querySelector(".js-container-select-brands")
-  initClicks();
+  const containerSelets = document.querySelectorAll(".searches-filter__select-container select.js-select-brand");
+
+  let selectOption = document.querySelectorAll("select.js-select-brand[name='brand_0'] option"),
+    selectsContainer = document.querySelector(".searches-filter__property-brand-flex-selects");
+    arrOption = [],
+    count = containerSelets.length;;
   initCustomSelect();
   initMaskInputs();
+  initClicks();
   function initClicks() {
     document.addEventListener("click", (event) => {
       if (event.target.closest(".burger")) {
@@ -15,7 +20,27 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       } if (event.target.closest(".js-show-select-brand")) { 
         event.preventDefault();
-        containerSelectBrans.classList.toggle("active");
+        
+        count++;
+        
+        let selectContainerNew = document.createElement("div");
+        selectContainerNew.className = "searches-filter__select-container";
+
+        selectsContainer.append(selectContainerNew);
+
+        let selectNew = document.createElement("select");
+        selectNew.setAttribute("Placeholder", "Brands");
+        selectNew.setAttribute("name", `brand_${count}`);
+        selectNew.className = "searches-filter__select js-select-brand";
+        
+        selectOption.forEach(option => {
+          selectNew.append(option);
+        })
+      
+        selectContainerNew.append(selectNew);
+        initCustomSelect();
+        selectNew.selectize.updatePlaceholder();
+        selectNew.selectize.clear();
       }
     });
   };
