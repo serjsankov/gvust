@@ -669,9 +669,17 @@ body {
     display: block;
 }
 
-.searches-filter__property-brand.active .searches-filter__property-button-line.button-line_vertical {
+.searches-filter__property-button.active .searches-filter__property-button-line.button-line_vertical {
+    transform: rotate(270deg);
+}
+
+/* .searches-filter__property-button-line.button-line_vertical.active {
     transform: rotate(180deg);
 }
+
+.searches-filter__property-button-line.button-line_position.active+.searches-filter__property-button-line.button-line_vertical {
+    transform: rotate(180deg);
+} */
 
 .searches-filter__property-container-flex {
     display: flex;
@@ -681,6 +689,12 @@ body {
 
 .searches-filter__select-container {
     flex-basis: 50%;
+}
+
+.searches-filter__select-container-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .searches-filter__input {

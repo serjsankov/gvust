@@ -4,7 +4,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let selectOption = document.querySelectorAll("select.js-select-brand[name='brand_0'] option"),
     selectsContainer = document.querySelector(".searches-filter__property-brand-flex-selects");
-    containerBtns = document.querySelector(".js-btns-select-brand"),
+  containerBtns = document.querySelector(".js-btns-select-brand"),
+    selectBlock = document.querySelectorAll(".searches-filter__select-container");
     count = containerSelets.length;;
   initCustomSelect();
   initMaskInputs();
@@ -20,11 +21,14 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       } if (event.target.closest(".js-show-select-brand")) { 
         event.preventDefault();
+
+        event.srcElement.classList.toggle("active");
         
         count++;
         
         let selectContainerNew = document.createElement("div");
-        selectContainerNew.className = "searches-filter__select-container";
+        selectContainerNew.className = "searches-filter__select-container js-select-block";
+        selectContainerNew.setAttribute("data-index", `${count}`)
 
         selectsContainer.append(selectContainerNew);
 
@@ -43,26 +47,23 @@ window.addEventListener("DOMContentLoaded", () => {
         selectNew.selectize.clear();
 
      
-        let btnAddNewSelect = document.createElement("div");
-        btnAddNewSelect.classList = "block-btn";
-        btnAddNewSelect.innerHTML += `<div class="" data-index="${count}">
-        <button class="searches-filter__property-button js-show-select-brand">
-          <span
-            class="searches-filter__property-button-line button-line_vertical"
-          ></span>
-          <span
-            class="searches-filter__property-button-line button-line_position"
-          ></span>
-        </button>
-      </div>`;
-        containerBtns.append(btnAddNewSelect);
-        console.log(event.srcElement)
-        event.srcElement.classList.remove("js-show-select-brand");
-        event.srcElement.classList.add("js-hide-select-brand");
-        //event.srcElement.removeEventListener("click", () => { }, true);
-      } if (event.target.closest(".js-hide-select-brand")) { 
-        event.preventDefault();
-      }
+        // let btnAddNewSelect = document.createElement("div");
+        // btnAddNewSelect.classList = "block-btn";
+        // btnAddNewSelect.setAttribute("data-index", `${count}`);
+        // btnAddNewSelect.innerHTML += `
+        // <button class="searches-filter__property-button js-show-select-brand">
+        //   <span
+        //     class="searches-filter__property-button-line button-line_vertical"
+        //   ></span>
+        //   <span
+        //     class="searches-filter__property-button-line button-line_position"
+        //   ></span>
+        // </button>`;
+        // containerBtns.append(btnAddNewSelect);
+        
+        // event.srcElement.classList.remove("js-show-select-brand");
+        // event.srcElement.classList.add("js-hide-select-brand");
+      } 
     });
   };
   function initCustomSelect() { 
