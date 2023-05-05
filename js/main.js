@@ -4,7 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let selectOption = document.querySelectorAll("select.js-select-brand[name='brand_0'] option"),
     selectsContainer = document.querySelector(".searches-filter__property-brand-flex-selects");
-    arrOption = [],
+    containerBtns = document.querySelector(".js-btns-select-brand"),
     count = containerSelets.length;;
   initCustomSelect();
   initMaskInputs();
@@ -41,6 +41,27 @@ window.addEventListener("DOMContentLoaded", () => {
         initCustomSelect();
         selectNew.selectize.updatePlaceholder();
         selectNew.selectize.clear();
+
+     
+        let btnAddNewSelect = document.createElement("div");
+        btnAddNewSelect.classList = "block-btn";
+        btnAddNewSelect.innerHTML += `<div class="" data-index="${count}">
+        <button class="searches-filter__property-button js-show-select-brand">
+          <span
+            class="searches-filter__property-button-line button-line_vertical"
+          ></span>
+          <span
+            class="searches-filter__property-button-line button-line_position"
+          ></span>
+        </button>
+      </div>`;
+        containerBtns.append(btnAddNewSelect);
+        console.log(event.srcElement)
+        event.srcElement.classList.remove("js-show-select-brand");
+        event.srcElement.classList.add("js-hide-select-brand");
+        //event.srcElement.removeEventListener("click", () => { }, true);
+      } if (event.target.closest(".js-hide-select-brand")) { 
+        event.preventDefault();
       }
     });
   };
